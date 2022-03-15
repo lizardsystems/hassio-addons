@@ -1,0 +1,39 @@
+{
+    "name": "ecowitt2mqtt",
+    "version": "2022.01.0-1",
+    "slug": "ecowitt2mqtt",
+    "description": "Publish sensor data from GW1000 to MQTT",
+    "stage": "stable",
+    "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+    "url": "https://github.com/lizardsystems/hassio-addons/tree/main/ecowitt2mqtt/",
+    "startup": "application",
+    "boot": "auto",
+    "services": ["mqtt:need"],
+    "map": [
+        "share:rw",
+        "config:rw"
+    ],
+    "ports": {
+        "8080/tcp": 8088
+    },
+    "ports_description": {
+        "8080/tcp": "ECOWITT2MQTT"
+    },
+    "options": {
+		"input_unit_system": "imperial",
+		"output_unit_system": "metric",
+		"mqtt_topic": "GW1000",
+		"log_level": "DEBUG"
+		
+    },
+    "schema": {
+        "mqtt_broker": "str?",
+        "mqtt_port": "port?",
+        "mqtt_username": "str?",
+        "mqtt_password": "password?",
+		"mqtt_topic": "str?",
+		"input_unit_system": "list(metric|imperial)?",
+		"output_unit_system": "list(metric|imperial)?",
+        "log_level": "list(DEBUG|INFO|WARNING|ERROR|CRITICAL)?"
+    }
+}
