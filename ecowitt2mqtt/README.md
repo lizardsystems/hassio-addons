@@ -1,3 +1,3 @@
-# ecowitt2mqtt
+# GW1000 to MQTT
 
 readme

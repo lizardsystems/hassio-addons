@@ -1,3 +1,4 @@
-# ecowitt2mqtt
+# Ecowitt to MQTT
 
-docs
+Home Assistant add-on to run ecowitt2mqtt. 
+
